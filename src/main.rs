@@ -11,8 +11,12 @@ fn main() {
         Some(path) => fs::read_to_string(path).map_err(|e| e.to_string()),
         None => read_stdin(),
     };
-    println!("{}", match input.map(parse_input) {
-        Ok(words) => wd::wd(words, opt.number).join(" "),
-        Err(err) => err,
-    });
+    match input.map(parse_input) {
+        Ok(lines) => {
+            for words in lines {
+                println!("{}", wd::wd(words, opt.number.clone()).join(" "));
+            }
+        },
+        Err(err) => println!("{}", err),
+    };
 }

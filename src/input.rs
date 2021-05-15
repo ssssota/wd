@@ -24,6 +24,12 @@ pub fn read_stdin() -> Result<String, String> {
   }
 }
 
-pub fn parse_input(input: String) -> Vec<String> {
-  input.split_whitespace().map(|str| str.to_string()).collect()
+pub fn parse_input(lines: String) -> Vec<Vec<String>> {
+  lines
+    .split("\n")
+    .map(str::trim)
+    .map(str::split_whitespace)
+    .map(|v| v.map(str::to_string))
+    .map(Iterator::collect)
+    .collect()
 }

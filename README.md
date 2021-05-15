@@ -4,6 +4,12 @@ wd - a command line tool for print specified position of words
 
 *Inpired by https://github.com/onsd/wd*
 
+## Installation
+
+```sh
+cargo install wd
+```
+
 ## Usage
 
 ```sh

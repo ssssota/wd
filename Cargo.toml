@@ -1,0 +1,8 @@
+[package]
+name = "wd"
+version = "0.1.0"
+authors = ["Sotaro Tommykawa <tommysouta@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+structopt = "0.3"

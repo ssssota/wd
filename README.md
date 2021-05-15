@@ -12,3 +12,12 @@ echo "a b c" | wd -n 1 2
 echo "a b c" | wd -n 1 3
 # a c
 ```
+
+```sh
+cat some.txt
+# abc def
+wd --input some.txt --number 1
+# abc
+wd -i some.txt -n 2
+# def
+```

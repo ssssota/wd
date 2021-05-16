@@ -50,3 +50,16 @@ exa -l | wd -n 1 7
 # drwxrwxrwx src
 # drwxrwxrwx target
 ```
+
+### custom delimiter
+
+```sh
+cat some.csv
+# a,b,c
+# 1,2,3
+# 4,5,6
+cat some.csv | wd -d "," -n 1 3
+# a c
+# 1 3
+# 4 6
+```
